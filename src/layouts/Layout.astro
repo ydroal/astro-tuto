@@ -1,13 +1,23 @@
+---
+import "../styles/global.css";
+import React from 'react';
+import Header from '../components/React/Header.jsx';
+const currentPath = Astro.url.pathname; // 現在のパスを取得
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content="Yon's Blog - My Ordinary Life" />
+  	<meta name="keywords" content="blog, ブログ, Life, Food, Family" />
+		<title>Yon's Blog</title>
 	</head>
-	<body>
+	<body class="bg-gray font-text min-h-screen">
+		<Header currentPath={currentPath} />
 		<slot />
 	</body>
 </html>
