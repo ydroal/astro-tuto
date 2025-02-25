@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
-
 export default function Header({ currentPath }) {
   const links = [
     { label: "Home", href: "/" },
     { label: "Blog", href: "/blog" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
-    <header className="bg-gray h-32 flex justify-between px-4 py-5 md:px-16 fixed top-0 left-0 right-0 z-30">
+    <header className="bg-gray h-32 fixed top-0 left-0 right-0 z-30">
+      <div className="max-w-7xl px-4 md:px-16 flex items-center justify-between h-full">
         <a href="/">
           <img src="assets/logo.svg" alt="Yon blog" className="w-[85%] h-[85%] pb-5" />
         </a>  
-      
-
         <nav className="flex gap-5">
           {links.map(link => {
             const isActive = currentPath === link.href;
@@ -33,8 +30,7 @@ export default function Header({ currentPath }) {
           );
         })}
         </nav>
+      </div>
     </header>
   );
 }
-
-

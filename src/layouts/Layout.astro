@@ -2,7 +2,8 @@
 import "../styles/global.css";
 import React from 'react';
 import Header from '../components/React/Header.jsx';
-const currentPath = Astro.url.pathname; // 現在のパスを取得
+import Footer from '../components/Footer.astro';
+const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -16,9 +17,12 @@ const currentPath = Astro.url.pathname; // 現在のパスを取得
   	<meta name="keywords" content="blog, ブログ, Life, Food, Family" />
 		<title>Yon's Blog</title>
 	</head>
-	<body class="bg-gray font-text min-h-screen">
+	<body class="bg-gray font-text min-h-screen pt-32">
 		<Header currentPath={currentPath} />
-		<slot />
+		<main class="max-w-7xl mx-auto px-4 md:px-16">
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 
