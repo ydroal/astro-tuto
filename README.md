@@ -1,7 +1,7 @@
 # YonBlog (Astro Learning Project)
 
 <div align="center">
-  <img src="./public/screenshot.jpg" width="700" alt="YonBlog Screenshot">
+  <img src="./public/assets/yons_blog_screenshot.jpg" width="700" alt="YonBlog Screenshot">
 </div>
 
 ## Overview
@@ -33,6 +33,7 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── tailwind.config.js
 ├── tsconfig.json
 └── README.md
+```
 
 ## Commands
 
